@@ -32,9 +32,10 @@ class DashboardPage extends StatelessWidget {
       body: Padding(
         padding: const EdgeInsets.all(16),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const AvatarDisplay(),
-            const SizedBox(height: 20),
+            const SizedBox(height: 12),
             const RankInfo(),
             const SizedBox(height: 20),
             const TrainingLogButton(),
@@ -51,14 +52,14 @@ class AvatarDisplay extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 150,
-      width: 150,
+      height: 80,
+      width: 80,
       decoration: BoxDecoration(
         shape: BoxShape.circle,
         color: Colors.deepPurple.withOpacity(0.2),
       ),
       child: const Center(
-        child: Icon(Icons.bolt, size: 64, color: Colors.deepPurpleAccent),
+        child: Icon(Icons.bolt, size: 40, color: Colors.deepPurpleAccent),
       ),
     );
   }
@@ -71,11 +72,11 @@ class RankInfo extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Row(
       children: [
-        Text('Current Rank:', style: TextStyle(fontSize: 18)),
-        SizedBox(height: 8),
+        Text('Current Rank:', style: TextStyle(fontSize: 14)),
+        SizedBox(width: 8),
         Text('Spark of the Storm',
             style: TextStyle(
-                fontSize: 24,
+                fontSize: 18,
                 fontWeight: FontWeight.bold,
                 color: Colors.deepPurpleAccent)),
       ],
